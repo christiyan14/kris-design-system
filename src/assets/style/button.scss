@@ -6,6 +6,7 @@
     padding: $button-padding-top $button-padding-right $button-padding-bottom $button-padding-left;
     border-radius: $button-radius;
     border: $button-border;
+    font-size: $button-font-size;
 }
 
 .button-secondary {
@@ -14,4 +15,5 @@
     padding: $button-padding-top $button-padding-right $button-padding-bottom $button-padding-left;
     border-radius: $button-radius;
     border: $button-border;
+    font-size: $button-font-size;
 }
