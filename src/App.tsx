@@ -1,8 +1,8 @@
 import "./App.scss";
-import Button from "./components/button";
+import Button from "./components/button/Button";
 
 function App() {
-  return <Button label="Click me" />;
+  return <Button label="Button" />;
 }
 
 export default App;

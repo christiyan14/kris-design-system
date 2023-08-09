@@ -1,5 +1,5 @@
 import { FC, MouseEvent } from "react";
-import "../assets/style/button.scss";
+import "./button.scss";
 
 interface ButtonProps {
   label: string;
@@ -12,7 +12,12 @@ const Button: FC<ButtonProps> = ({ label, type = "primary", onClick }) => {
     type === "primary" ? "button-primary" : "button-secondary";
 
   return (
-    <button className={buttonClass} onClick={onClick}>
+    <button
+      className={buttonClass}
+      onClick={onClick}
+      type="button"
+      title="Click me"
+    >
       {label}
     </button>
   );
