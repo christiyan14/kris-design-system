@@ -25,7 +25,7 @@ jobs:
 
       - name: Commit Changes
         run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
+          git config user.email "kristiyan.velkov@ffw.com"
+          git config user.name "Kristiyan Velkov"
           git commit -am "Auto-generated changes" || true  # In case there are no changes
           git push
