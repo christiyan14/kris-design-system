@@ -1,5 +1,5 @@
 import { FC, MouseEvent } from "react";
-import "../assets/style/button.scss";
+import "./button.scss";
 
 interface ButtonProps {
   label: string;

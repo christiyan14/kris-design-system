@@ -1,0 +1,19 @@
+@import '../../assets/style/variables';
+
+.button-primary {
+    background-color: $tokens-button-primary;
+    color: $tokens-button-text-color;
+    padding: $tokens-button-padding-top $tokens-button-padding-right $tokens-button-padding-bottom $tokens-button-padding-left;
+    border-radius: $tokens-button-radius;
+    border: $tokens-button-border;
+    font-size: $tokens-button-font-size;
+}
+
+.button-secondary {
+    background-color: $tokens-button-secondary;
+    color: $tokens-button-text-color;
+    padding: $tokens-button-padding-top $tokens-button-padding-right $tokens-button-padding-bottom $tokens-button-padding-left;
+    border-radius: $tokens-button-radius;
+    border: $tokens-button-border;
+    font-size: $tokens-button-font-size;
+}
