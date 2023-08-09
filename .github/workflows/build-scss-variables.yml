@@ -25,11 +25,11 @@ jobs:
       - uses: andstor/copycat-action@v3.2.4
         with:
           personal_token: ${{ secrets.GH_PAT }}
-          src_branch: develop
+          src_branch: tokens
           src_path: output/.
           dst_owner: christiyan14
           dst_repo_name: kris-design-system
-          dst_branch: main
+          dst_branch: develop
           dst_path: ./
           username: kristiyan velkov
           email: kristiyan.velkov@gmail.com
