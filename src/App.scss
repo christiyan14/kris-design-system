@@ -1,1 +1,7 @@
 @use './assets/style/variables.scss' as style;
+
+.button-section {
+    button {
+        margin: 10px;
+    }
+}
