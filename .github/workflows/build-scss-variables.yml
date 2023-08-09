@@ -1,0 +1,36 @@
+name: Generate css vars from tokens and copy
+
+on:
+  pull_request:
+    branches:
+      - develop
+    types: [closed]
+
+jobs:
+  build_tokens:
+    if: (!(github.event.action == 'closed' && github.event.pull_request.merged != true))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate tokens to scss variables
+        uses: actions/setup-node@v3
+      - run: yarn install --frozen-lockfile
+      - run: yarn run storybook
+        with:
+          commit_message: build tokens to scss variables
+  copy_tokens:
+    runs-on: ubuntu-latest
+    needs: [build_tokens]
+    steps:
+      - uses: andstor/copycat-action@v3.2.4
+        with:
+          personal_token: ${{ secrets.GH_PAT }}
+          src_branch: develop
+          src_path: output/.
+          dst_owner: christiyan14
+          dst_repo_name: kris-design-system
+          dst_branch: main
+          dst_path: ./
+          username: kristiyan velkov
+          email: kristiyan.velkov@gmail.com
+          commit_message: generate scss variables
