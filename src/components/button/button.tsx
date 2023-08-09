@@ -12,7 +12,12 @@ const Button: FC<ButtonProps> = ({ label, type = "primary", onClick }) => {
     type === "primary" ? "button-primary" : "button-secondary";
 
   return (
-    <button className={buttonClass} onClick={onClick}>
+    <button
+      className={buttonClass}
+      onClick={onClick}
+      type="button"
+      title="Click me"
+    >
       {label}
     </button>
   );
