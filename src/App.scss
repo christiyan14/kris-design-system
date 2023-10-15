@@ -1,7 +1,40 @@
-@use './assets/style/variables.scss' as style;
+@use '../src/assets/style/variables.scss' as style;
 
-.button-section {
-    button {
-        margin: 10px;
+.main-container {
+
+    width: 100%;
+    background-image: url(style.$hero-jpg);
+    font-family: Roboto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 885px;
+
+    &_title {
+        margin-top: 160px;
+        color: style.$hero-title-color;
+        text-align: center;
+        font-size: style.$hero-title-size;
+        align-self: stretch;
+        width: 100%;
+    }
+
+    &_description {
+        color: style.$hero-description-color;
+        font-size: style.$hero-description-font-size;
+        font-weight: 400;
+        margin-top: 40px;
+        white-space: nowrap;
+    }
+
+    &_button {
+        margin-top: auto;
+        margin-bottom: 50px;
     }
 }

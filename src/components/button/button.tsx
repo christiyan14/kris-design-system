@@ -3,19 +3,16 @@ import "./Button.scss";
 
 interface ButtonProps {
   label: string;
-  type?: "primary" | "secondary";
+  type?: "submit" | "button";
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: FC<ButtonProps> = ({ label, type = "primary", onClick }) => {
-  const buttonClass =
-    type === "primary" ? "button-primary" : "button-secondary";
-
+const Button: FC<ButtonProps> = ({ label, type = "button", onClick }) => {
   return (
     <button
-      className={buttonClass}
+      className="button-primary"
       onClick={onClick}
-      type="button"
+      type={type}
       title="Click me"
     >
       {label}

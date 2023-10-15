@@ -1,16 +1,17 @@
 import "./App.scss";
-import Button from "./components/button/Button";
+import json from ".././tokens.json";
 
-function App() {
+export default function App() {
   return (
     <>
-      <section className="button-section">
-        <Button label="Button" />
-
-        <Button label="Button" type="secondary" />
-      </section>
+      <main className="main-container">
+        <section className="hero-section">
+          <div className="hero-section_title">{json?.hero.title.value}</div>
+          <div className="hero-section_description">
+            {json?.hero?.description.value}
+          </div>
+        </section>
+      </main>
     </>
   );
 }
-
-export default App;
